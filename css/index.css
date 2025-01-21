@@ -1,0 +1,13 @@
+.calculatorDiv {
+    height: 600px;
+    width: 600px;
+    background-color: #666;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-self: center;
+}
+button {
+    height: 50px;
+    width: 50px;
+}
