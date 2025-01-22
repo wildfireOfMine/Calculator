@@ -40,6 +40,7 @@ sevenButton.addEventListener("click", e=>{
     if (secondNumber === "" && operator === "") {
         firstNumber = parseInt(screen.value);
     } else if (firstNumber != ""){
+        console.log(screen.value);
         console.log((screen.value).substring(1));
         secondNumber = parseInt((screen.value).substring(1));
     }
@@ -47,82 +48,100 @@ sevenButton.addEventListener("click", e=>{
 
 eightButton.addEventListener("click", e=>{
     screen.value += "8";
-    if (secondNumber === "") {
+    if (secondNumber === "" && operator === "") {
         firstNumber = parseInt(screen.value);
     } else if (firstNumber != ""){
-        secondNumber = parseInt(screen.value);
+        console.log(screen.value);
+        console.log((screen.value).substring(1));
+        secondNumber = parseInt((screen.value).substring(1));
     }
 });
 
 nineButton.addEventListener("click", e=>{
     screen.value += "9";
-    if (secondNumber === "") {
+    if (secondNumber === "" && operator === "") {
         firstNumber = parseInt(screen.value);
     } else if (firstNumber != ""){
-        secondNumber = parseInt(screen.value);
+        console.log(screen.value);
+        console.log((screen.value).substring(1));
+        secondNumber = parseInt((screen.value).substring(1));
     }
 });
 
 fourButton.addEventListener("click", e=>{
     screen.value += "4";
-    if (secondNumber === "") {
+    if (secondNumber === "" && operator === "") {
         firstNumber = parseInt(screen.value);
     } else if (firstNumber != ""){
-        secondNumber = parseInt(screen.value);
+        console.log(screen.value);
+        console.log((screen.value).substring(1));
+        secondNumber = parseInt((screen.value).substring(1));
     }
 });
 
 fiveButton.addEventListener("click", e=>{
     screen.value += "5";
-    if (secondNumber === "") {
+    if (secondNumber === "" && operator === "") {
         firstNumber = parseInt(screen.value);
     } else if (firstNumber != ""){
-        secondNumber = parseInt(screen.value);
+        console.log(screen.value);
+        console.log((screen.value).substring(1));
+        secondNumber = parseInt((screen.value).substring(1));
     }
 });
 
 sixButton.addEventListener("click", e=>{
     screen.value += "6";
-    if (secondNumber === "") {
+    if (secondNumber === "" && operator === "") {
         firstNumber = parseInt(screen.value);
     } else if (firstNumber != ""){
-        secondNumber = parseInt(screen.value);
+        console.log(screen.value);
+        console.log((screen.value).substring(1));
+        secondNumber = parseInt((screen.value).substring(1));
     }
 });
 
 oneButton.addEventListener("click", e=>{
     screen.value += "1";
-    if (secondNumber === "") {
+    if (secondNumber === "" && operator === "") {
         firstNumber = parseInt(screen.value);
     } else if (firstNumber != ""){
-        secondNumber = parseInt(screen.value);
+        console.log(screen.value);
+        console.log((screen.value).substring(1));
+        secondNumber = parseInt((screen.value).substring(1));
     }
 });
 
 twoButton.addEventListener("click", e=>{
     screen.value += "2";
-    if (secondNumber === "") {
+    if (secondNumber === "" && operator === "") {
         firstNumber = parseInt(screen.value);
     } else if (firstNumber != ""){
-        secondNumber = parseInt(screen.value);
+        console.log(screen.value);
+        console.log((screen.value).substring(1));
+        secondNumber = parseInt((screen.value).substring(1));
     }
 });
 
 threeButton.addEventListener("click", e=>{
     screen.value += "3";
-    if (secondNumber === "") {
+    if (secondNumber === "" && operator === "") {
         firstNumber = parseInt(screen.value);
     } else if (firstNumber != ""){
-        secondNumber = parseInt(screen.value);
+        console.log(screen.value);
+        console.log((screen.value).substring(1));
+        secondNumber = parseInt((screen.value).substring(1));
     }
 });
 
 zeroButton.addEventListener("click", e=>{
     screen.value += "0";
-    if (secondNumber === "") {
+    if (secondNumber === "" && operator === "") {
         firstNumber = parseInt(screen.value);
     } else if (firstNumber != ""){
-        secondNumber = parseInt(screen.value);
+        console.log(screen.value);
+        console.log((screen.value).substring(1));
+        secondNumber = parseInt((screen.value).substring(1));
     }
 });
 
@@ -147,6 +166,12 @@ dividesButton.addEventListener("click", e=>{
     screen.value = "/";
     operator = "/";
 });
+
+modButton.addEventListener("click", e=>{
+    screen.value = "%";
+    operator = "%";
+})
+
 
 /* Equals */
 
@@ -177,6 +202,10 @@ function divide(a, b){
     return a/b;
 }
 
+function mod(a, b){
+    return a%b;
+}
+
 function operate(operator, a, b){
     var result = 0;
     if (operator === "+") {
@@ -188,6 +217,8 @@ function operate(operator, a, b){
 
     } else if (operator === "/") {
         result = divide(a, b);
+    } else if (operator === "%") {
+        result = mod(a, b);
     }
 
     return result;
